@@ -1,0 +1,25 @@
+name: Run send_line_event.py
+
+on:
+  schedule:
+    - cron: '*/3 * * * *'  # 每3分鐘執行一次
+  workflow_dispatch:       # 手動觸發
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run the script
+        run: python send_line_event.py
