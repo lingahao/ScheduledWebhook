@@ -2,7 +2,7 @@ import requests
 import time
 import os
 
-url = os.environ["WEBHOOK_URL"]
+url = os.environ["webhook_url"]
 # url = 'https://9097-59-125-150-114.ngrok-free.app/callback'
 
 data = {
