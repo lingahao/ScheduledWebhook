@@ -3,9 +3,8 @@ import time
 import os
 
 url = os.getenv('WEBHOOK_URL')
-if not url:
-    url = 'https://9097-59-125-150-114.ngrok-free.app/callback'
-    raise ValueError("環境變數 WEBHOOK_URL 未設定，請確認 GitHub Secrets 是否正確設定。")
+# if not url:
+#     url = 'https://9097-59-125-150-114.ngrok-free.app/callback'
 
 data = {
     "events": [
