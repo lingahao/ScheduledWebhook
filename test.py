@@ -1,10 +1,8 @@
 import requests
 import time
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
-url = os.getenv('WEBHOOK_URL')
+url = os.environ['WEBHOOK_URL']
 # if not url:
 #     url = 'https://9097-59-125-150-114.ngrok-free.app/callback'
 
