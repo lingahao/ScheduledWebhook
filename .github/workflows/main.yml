@@ -20,6 +20,9 @@ jobs:
 
       - name: Install requests
         run: pip install requests
+      
 
       - name: Run the script
         run: python test.py
+        env: 
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
