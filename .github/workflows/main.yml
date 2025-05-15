@@ -20,9 +20,10 @@ jobs:
 
       - name: Install requests
         run: pip install requests
+             pip install python-dotenv
       
 
       - name: Run the script
-        run: python test.py
         env: 
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        run: python test.py
