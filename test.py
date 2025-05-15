@@ -2,7 +2,9 @@ import requests
 import time
 import os
 
-url = os.environ['WEBHOOK_URL']
+url = os.environ.get('WEBHOOK_URL')
+if not url:
+    raise ValueError("環境變數 WEBHOOK_URL 未設定，請確認 GitHub Secrets 是否正確設定。")
 
 data = {
     "events": [
