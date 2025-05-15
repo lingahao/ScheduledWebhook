@@ -2,8 +2,8 @@ name: Run send_line_event.py
 
 on:
   schedule:
-    - cron: '*/3 * * * *'  # 每3分鐘執行一次
-  workflow_dispatch:       # 手動觸發
+    - cron: '1,11,21,31,41,51 * * * *'  # 每個小時的1,11,21...51分時執行一次
+  workflow_dispatch:                    # 手動觸發
 
 jobs:
   run-script:
