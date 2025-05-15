@@ -5,6 +5,9 @@ on:
     - cron: '1,11,21,31,41,51 * * * *'  # 每個小時的1,11,21...51分時執行一次
   workflow_dispatch:                    # 手動觸發
 
+env:
+  WEBHOOK_URL: ${{ secrets.WEBHOOK.URL }}
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
