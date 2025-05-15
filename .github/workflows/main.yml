@@ -20,8 +20,9 @@ jobs:
 
       - name: Install requests
         run: pip install requests
-             pip install python-dotenv
-      
+        
+      - name: Install python-dotenv
+        run:  pip install python-dotenv
 
       - name: Run the script
         env: 
