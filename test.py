@@ -2,7 +2,7 @@ import requests
 import time
 import os
 
-url = os.environ['webhook_url']
+url = os.environ['WEBHOOK_URL']
 
 data = {
     "events": [
